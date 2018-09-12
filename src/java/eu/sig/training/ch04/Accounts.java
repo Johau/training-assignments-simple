@@ -24,4 +24,13 @@ public class Accounts {
         }
     	return sum;
     }
+    
+    public void addInterest(Money balance,float interestPercentage) {
+        Money interest = balance.multiply(interestPercentage);
+        if (interest.greaterThan(0)) {
+            balance.add(interest);
+        } else {
+            balance.substract(interest);
+        }
+    }
 }
