@@ -8,7 +8,8 @@ public class FlagFactory {
 
     // tag::getFlag[]
     public List<Color> getFlagColors(Nationality nationality) {
-        List<Color> result;
+        List<Color> result;     
+        
         switch (nationality) {
         case DUTCH:
             result = Arrays.asList(Color.RED, Color.WHITE, Color.BLUE);
@@ -49,4 +50,23 @@ public class FlagFactory {
     }
     // end::getFlag[]
 
+
+}
+
+class Dutch extends FlagFactory{
+	public void setColor(List<Color> result) {
+		result = Arrays.asList(Color.RED, Color.WHITE, Color.BLUE);
+	}
+}
+
+class German extends FlagFactory{
+	public void setColor(List<Color> result) {
+		result = Arrays.asList(Color.BLACK, Color.RED, Color.YELLOW);
+	}
+}
+
+class Belgian extends FlagFactory{
+	public void setColor(List<Color> result) {
+		result = Arrays.asList(Color.BLACK, Color.YELLOW, Color.RED);
+	}
 }
